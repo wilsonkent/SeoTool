@@ -1,8 +1,9 @@
 -SEO Tool-
+
 Searches google using the base URL: https://www.google.com.au/search?num=100&q=
 with the input 
-= keywords - the string to use for google search
-= search string - the string to search within google search result
+- keywords - the string to use for google search
+- search string - the string to search within google search result
 
 Start button starts a scheduler job to search google with 1 day interval until stop button is clicked. Out of the scheduled searches are printed on the textblock below.
 
