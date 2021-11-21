@@ -1,0 +1,20 @@
+﻿<Window x:Class="SeoTool.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SeoTool"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Keywords" HorizontalAlignment="Left" Margin="26,27,0,0" VerticalAlignment="Top"/>
+        <Label Content="Search string" HorizontalAlignment="Left" Margin="26,78,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="keywords_textbox" HorizontalAlignment="Left" Margin="123,31,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="626" Height="18" Text="{Binding Keywords, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding KeywordsIsEnabled}"/>
+        <TextBox x:Name="search_textbox" HorizontalAlignment="Left" Margin="123,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="626" Text="{Binding SearchString, UpdateSourceTrigger=PropertyChanged}" IsEnabled="{Binding SearchStringIsEnabled}"/>
+        <Button x:Name="start_button" Content="Start" HorizontalAlignment="Left" Margin="123,132,0,0" VerticalAlignment="Top" Height="46" Width="208" Command="{Binding StartCommand}"/>
+        <Button x:Name="stop_button" Content="Stop" HorizontalAlignment="Left" Margin="377,132,0,0" VerticalAlignment="Top" Height="45" Width="208" Command="{Binding StopCommand}"/>
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" Margin="7,201,0,0" Height="200">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top" Width="783" Text="{Binding Output}"/>
+        </ScrollViewer>
+    </Grid>
+</Window>
